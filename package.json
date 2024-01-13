@@ -2,8 +2,11 @@
   "name": "desafio4",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://jcorp11.github.io/desafio4-react2/",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
