@@ -2,7 +2,7 @@
   "name": "desafio4",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://jcorp11.github.io/desafio4-react2/",
+  "homepage": "/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
@@ -18,6 +18,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
