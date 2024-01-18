@@ -16,7 +16,7 @@ const PizzaCard = ({ pizza }) => {
           <h5>Ingredientes:</h5>
           <ul>
             {pizza.ingredients.map((ingredient) => (
-              <li key={uuidv4()}>🍕 {ingredient}</li>
+              <li key={uuidv4()}>🍕 {Capitalize(ingredient)}</li>
             ))}
           </ul>
         </div>
@@ -24,7 +24,13 @@ const PizzaCard = ({ pizza }) => {
           <h3>$ {formatPrice(pizza.price)}</h3>
           <section className="btnContainer">
             <BtnVerMas id={pizza.id} />
-            <BtnAnadir id={pizza.id} pizza={pizza} />
+            <BtnAnadir
+              id={pizza.id}
+              pizza={pizza}
+              text={"Añadir 🛒"}
+              anadir={true}
+              color={"btn-danger"}
+            />
           </section>
         </section>
       </div>

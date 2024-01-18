@@ -1,0 +1,32 @@
+.pizzaWrapper {
+  padding: 30px 10%;
+  width: 100%;
+}
+
+.PizzapizzaContainer {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 100%;
+}
+
+.imgLeft {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 45%;
+}
+
+.right {
+  padding: 15px 15px;
+  width: 55%;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.lastRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

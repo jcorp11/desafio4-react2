@@ -13,10 +13,6 @@ const PizzaProvider = ({ children }) => {
       const res = await axios.get("/pizzas.json");
       // console.log(res.data);
       setPizzas(res.data);
-      const aux = res.data.map((pizza) => {
-        return { id: pizza.id, name: pizza.name, ammount: 0 };
-      });
-      setCarrito(aux);
     } catch (error) {
       console.log(error);
     }

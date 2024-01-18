@@ -1,0 +1,14 @@
+.carritoWrapper {
+  padding: 30px 10%;
+  width: 100%;
+}
+
+.carritoContainer {
+  width: 100%;
+  background-color: rgb(249, 232, 232);
+  padding: 25px 20px;
+}
+
+.carritoContent {
+  background-color: white;
+}
