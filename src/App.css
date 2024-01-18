@@ -8,9 +8,9 @@
 }
 
 body {
-  margin: 0;
-  height: 100vh;
-  background-color: bisque;
+  padding: 0 0 40px 0;
+  min-height: 100vh;
+  background-color: rgb(251, 251, 251);
   display: flex;
 }
 
