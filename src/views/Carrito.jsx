@@ -7,13 +7,14 @@ import CarritoRow from "../components/CarritoRow";
 
 const Carrito = () => {
   const { carrito } = useContext(PizzaContext);
+  const filteredCarrito = carrito.filter((pizza) => pizza.ammount > 0);
   return (
     <section className="carritoWrapper">
       <section className="carritoContainer">
         <h4>Detalles del pedido:</h4>
         <section className="carritoContent">
           <section className="carritoGrid">
-            {carrito.map((pizza) => (
+            {filteredCarrito.map((pizza) => (
               <CarritoRow key={uuidv4()} pizza={pizza} />
             ))}
           </section>

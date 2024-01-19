@@ -12,7 +12,7 @@ const Pizza = () => {
   const { id } = useParams();
   const { pizzas } = useContext(PizzaContext);
   const pizza = pizzas.find((item) => item.id === id);
-  console.log(pizza);
+  // console.log(pizza);
   return (
     <section className="pizzaWrapper">
       <section className="PizzapizzaContainer">
@@ -32,7 +32,13 @@ const Pizza = () => {
           </ul>
           <section className="lastRow">
             <h2>Precio: $ {formatPrice(pizza.price)}</h2>
-            <BtnAnadir id={pizza.id} pizza={pizza} />
+            <BtnAnadir
+              id={pizza.id}
+              pizza={pizza}
+              text={"Añadir 🛒"}
+              anadir={true}
+              color={"btn-danger"}
+            />
           </section>
         </section>
       </section>

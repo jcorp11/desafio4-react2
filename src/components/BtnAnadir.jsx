@@ -35,8 +35,9 @@ const BtnAnadir = ({ pizza, id, text, anadir, color }) => {
         const newCarro = carrito.filter((item) => item.id !== id);
         console.log(newCarro);
         setCarrito(newCarro);
+      } else {
+        setCarrito([...carrito]);
       }
-      setCarrito([...carrito]);
     }
     setMonto(monto - pizza.price);
   };
