@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <NavLink to="/">🍕 Pizzería Mamma Mia!</NavLink>
+      <NavLink to="/">🍕 !Pizzería Mamma Mia!</NavLink>
 
       <NavLink className={setActiveClass} to="/carrito">
         <span>🛒 $ {formatPrice(monto)}</span>

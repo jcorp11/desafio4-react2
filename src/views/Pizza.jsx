@@ -11,6 +11,7 @@ import "./css/Pizza.css";
 const Pizza = () => {
   const { id } = useParams();
   const { pizzas } = useContext(PizzaContext);
+  console.log(pizzas);
   const pizza = pizzas.find((item) => item.id === id);
   // console.log(pizza);
   return (

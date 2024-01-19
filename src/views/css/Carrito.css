@@ -1,5 +1,5 @@
 .carritoWrapper {
-  padding: 30px 10%;
+  padding: 30px 20%;
   width: 100%;
 }
 
@@ -11,4 +11,5 @@
 
 .carritoContent {
   background-color: white;
+  padding: 10px 10px;
 }

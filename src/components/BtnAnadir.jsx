@@ -8,11 +8,12 @@ const BtnAnadir = ({ pizza, id, text, anadir, color }) => {
   const anadirPizza = () => {
     const aux = carrito.find((item) => item.id === id);
     // console.log(aux);
+    let newCarrito;
     if (aux) {
       aux.ammount += 1;
-      setCarrito([...carrito]);
+      newCarrito = [...carrito];
     } else {
-      setCarrito([
+      newCarrito = [
         ...carrito,
         {
           id: pizza.id,
@@ -21,23 +22,27 @@ const BtnAnadir = ({ pizza, id, text, anadir, color }) => {
           price: pizza.price,
           ammount: 1,
         },
-      ]);
+      ];
     }
+    localStorage.setItem("carrito", JSON.stringify(newCarrito));
+    setCarrito(newCarrito);
     setMonto(monto + pizza.price);
   };
 
   const restarPizza = () => {
     const aux = carrito.find((item) => item.id === id);
+    let newCarrito;
     // console.log(aux);
     if (aux) {
       aux.ammount -= 1;
       if (aux.ammount === 0) {
-        const newCarro = carrito.filter((item) => item.id !== id);
-        console.log(newCarro);
-        setCarrito(newCarro);
+        newCarrito = carrito.filter((item) => item.id !== id);
       } else {
-        setCarrito([...carrito]);
+        newCarrito = [...carrito];
       }
+      console.log(newCarrito);
+      localStorage.setItem("carrito", JSON.stringify(newCarrito));
+      setCarrito(newCarrito);
     }
     setMonto(monto - pizza.price);
   };

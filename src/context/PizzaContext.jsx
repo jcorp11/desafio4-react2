@@ -20,6 +20,11 @@ const PizzaProvider = ({ children }) => {
 
   useEffect(() => {
     getPizzas();
+    const storedCarrito = JSON.parse(localStorage.getItem("carrito"));
+    if (storedCarrito) {
+      setCarrito(storedCarrito);
+      setMonto(storedCarrito.reduce((a, b) => a + b.price * b.ammount, 0));
+    }
   }, []);
 
   return (
