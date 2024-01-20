@@ -40,7 +40,7 @@ const BtnAnadir = ({ pizza, id, text, anadir, color }) => {
       } else {
         newCarrito = [...carrito];
       }
-      console.log(newCarrito);
+      // console.log(newCarrito);
       localStorage.setItem("carrito", JSON.stringify(newCarrito));
       setCarrito(newCarrito);
     }

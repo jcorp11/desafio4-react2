@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const BtnVerMas = ({ id }) => {
   const navigate = useNavigate();
   const irAPizza = () => {
-    console.log(id);
+    // console.log(id);
     navigate(`/pizza/${id}`);
   };
   return (
