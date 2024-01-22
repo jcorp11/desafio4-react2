@@ -11,7 +11,7 @@ const Home = () => {
       <div className="hero py-5">
         <section className="content">
           <h1>¡Pizzería Mamma Mia!</h1>
-          <p>Tenemos las mejores pizzas que podrás encontrar!</p>
+          <p>¡Tenemos las mejores pizzas que podrás encontrar!</p>
           <hr />
         </section>
       </div>

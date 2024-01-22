@@ -12,7 +12,6 @@ const Pizza = () => {
   const [pizza, setPizza] = useState({ data: null });
   const [loading, setLoading] = useState(true);
   const { pizzas } = useContext(PizzaContext);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const aux = pizzas.find((item) => item.id === id);
@@ -21,10 +20,8 @@ const Pizza = () => {
       setPizza(aux);
     } else {
       console.error(`Pizza with ID ${id} not found`);
-      // setLoading(true);
-      // navigate("/"); // Redirect to an error page or home page
     }
-  }, [id, pizzas, navigate]);
+  }, [id, pizzas]);
 
   if (loading) {
     return <div>Loading...</div>; // Or any other loading indicator
