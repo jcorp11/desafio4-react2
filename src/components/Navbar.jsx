@@ -6,7 +6,7 @@ import { formatPrice } from "../utils/aux";
 
 const Navbar = () => {
   const setActiveClass = ({ isActive }) => (isActive ? "active" : null);
-  const { monto, setMonto } = useContext(PizzaContext);
+  const { monto } = useContext(PizzaContext);
 
   return (
     <nav className="navbar">
